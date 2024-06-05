@@ -1,4 +1,4 @@
 package com.example.tp4.entities;
 
-public class Venta {
+public class EstadoVenta {
 }
