@@ -86,5 +86,22 @@ class Tp4ApplicationTests {
 		assertTrue(detalleVenta.getCantidad()>0);
 	}
 
+	@Test
+	void test_cantidad_tipo_Integer_en_DetalleVenta () {
+		DetalleVenta detalleVenta=new DetalleVenta(4);
+		assertInstanceOf(Integer.class,detalleVenta.getCantidad());
+	}
+
+	@Test
+	void test_nroVenta_tipo_Integer (){
+		Venta venta = new Venta(3456.00);
+		assertInstanceOf(Integer.class,venta.getId());
+	}
+
+	@Test
+	void test_id_EstadoVenta_tipo_Integer (){
+		EstadoVenta estadoVenta = new EstadoVenta(2000691986);
+		assertInstanceOf(Integer.class,estadoVenta.getId());
+	}
 
 }
