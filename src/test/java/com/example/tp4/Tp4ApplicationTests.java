@@ -49,5 +49,22 @@ class Tp4ApplicationTests {
 		assertInstanceOf(String.class,estadoVenta.getNombre());
 	}
 
+	@Test
+	void test_montoTotal_venta_mayor_a_cero (){
+		Venta venta = new Venta(3456.00);
+		assertTrue(venta.getMontoTotal()>0);
+	}
+
+	@Test
+	void test_montoTotal_tipo_double (){
+		Venta venta = new Venta(3456.00);
+		assertInstanceOf(Double.class,venta.getMontoTotal());
+	}
+
+	@Test
+	void test_montoTotal_no_vacio (){
+		Venta venta = new Venta(3456.00);
+		assertNotNull(venta.getMontoTotal());
+	}
 
 }
