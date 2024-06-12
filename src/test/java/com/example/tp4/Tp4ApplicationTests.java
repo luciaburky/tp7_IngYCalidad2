@@ -1,5 +1,6 @@
 package com.example.tp4;
 
+import com.example.tp4.entities.DetalleVenta;
 import com.example.tp4.entities.EstadoVenta;
 import com.example.tp4.entities.Venta;
 import org.junit.jupiter.api.Test;
@@ -65,6 +66,42 @@ class Tp4ApplicationTests {
 	void test_montoTotal_no_vacio (){
 		Venta venta = new Venta(3456.00);
 		assertNotNull(venta.getMontoTotal());
+	}
+
+	@Test
+	void test_nombre_EstadoVenta_distinto_de_nulo (){
+		EstadoVenta estadoVenta = new EstadoVenta("Pendiente");
+		assertNotNull(estadoVenta.getNombre());
+	}
+
+	@Test
+	void test_cantidad_no_nula_en_DetalleVenta () {
+		DetalleVenta detalleVenta=new DetalleVenta(4);
+		assertNotNull(detalleVenta.getCantidad());
+	}
+
+	@Test
+	void test_cantidad_mayor_a_cero_en_DetalleVenta () {
+		DetalleVenta detalleVenta=new DetalleVenta(4);
+		assertTrue(detalleVenta.getCantidad()>0);
+	}
+
+	@Test
+	void test_cantidad_tipo_Integer_en_DetalleVenta () {
+		DetalleVenta detalleVenta=new DetalleVenta(4);
+		assertInstanceOf(Integer.class,detalleVenta.getCantidad());
+	}
+
+	@Test
+	void test_nroVenta_tipo_Integer (){
+		Venta venta = new Venta(3456.00);
+		assertInstanceOf(Integer.class,venta.getId());
+	}
+
+	@Test
+	void test_id_EstadoVenta_tipo_Integer (){
+		EstadoVenta estadoVenta = new EstadoVenta(2000691986);
+		assertInstanceOf(Integer.class,estadoVenta.getId());
 	}
 
 }
