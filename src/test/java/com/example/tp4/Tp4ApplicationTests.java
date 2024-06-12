@@ -95,7 +95,7 @@ class Tp4ApplicationTests {
 	@Test
 	void test_nroVenta_tipo_Integer (){
 		Venta venta = new Venta(3456.00);
-		assertInstanceOf(Integer.class,venta.getId());
+		assertInstanceOf(Integer.class,venta.getMontoTotal());
 	}
 
 	@Test
