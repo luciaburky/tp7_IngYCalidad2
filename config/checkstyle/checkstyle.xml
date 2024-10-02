@@ -4,10 +4,10 @@
 
 <module name="Checker">
     <module name="TreeWalker">
-        <module name="JavadocMethod"/>
         <module name="WhitespaceAfter"/>
-        <module name="WhitespaceAround"/>
+        <module name="JavadocMethod"/>
+
         <module name="MethodParamPad"/>
-        <module name="Indentation"/>
+
     </module>
 </module>

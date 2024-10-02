@@ -1,24 +1,26 @@
 package com.example.tp4.entities;
 
 public class EstadoVenta {
-    private Integer id;
-    private String nombre;
+  private Integer id;
+  private String nombre;
 
-    public EstadoVenta(Integer id) {
-        this.id = id;
-    }
-    public Integer getId() {
-        return id;
-    }
-    public void setId(Integer id) {}
-    public EstadoVenta() {
-    }
+  public EstadoVenta(Integer id) {
+    this.id = id;
+  }
 
-    public String getNombre() {
-        return nombre;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public EstadoVenta(String nombre) {
-        this.nombre = nombre;
-    }
+  public void setId(Integer id) {}
+
+  public EstadoVenta() {}
+
+  public String getNombre() {
+    return nombre;
+  }
+
+  public EstadoVenta(String nombre) {
+    this.nombre = nombre;
+  }
 }
