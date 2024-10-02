@@ -2,9 +2,10 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: ["develop"]
+    branches: ["main"]
   pull_request:
-    branches: ["develop"]
+    branches: ["main"]
+
 
 jobs:
   build:
@@ -35,9 +36,6 @@ jobs:
       - name: Run integration tests
         run: ./gradlew integrationTest
 
-      - name: Check code quality with Linter
-        run: ./gradlew check
-
       # aplica el formateo del codigo automaticamente
       - name: Format code
         run: ./gradlew spotlessApply
@@ -46,3 +44,6 @@ jobs:
       # si no las sigue, genera error
       - name: Check code formatting
         run: ./gradlew spotlessCheck
+
+      - name: Check code quality with Linter
+        run: ./gradlew check
