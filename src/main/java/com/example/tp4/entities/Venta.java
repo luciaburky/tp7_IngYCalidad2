@@ -27,6 +27,12 @@ public class Venta {
     public Venta() {
     }
 
+    public Venta(Integer id, Date fecha, Double montoTotal) {
+        this.id = id;
+        this.fecha = fecha;
+        this.montoTotal = montoTotal;
+    }
+
     public Venta(Date fecha) {
         this.fecha = fecha;
     }
