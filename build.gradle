@@ -50,7 +50,7 @@ task integrationTest(type: Test) {
 check.dependsOn integrationTest
 
 checkstyle {
-    toolVersion = '10.5'
+    toolVersion = '10.12.1'
     config = rootProject.resources.text.fromFile('config/checkstyle/checkstyle.xml') // Asegúrate de tener este archivo de configuración
 }
 
