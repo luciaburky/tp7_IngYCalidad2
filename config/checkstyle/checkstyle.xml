@@ -8,6 +8,9 @@
         <module name="WhitespaceAfter"/>
         <module name="WhitespaceAround"/>
         <module name="MethodParamPad"/>
-        <module name="Indentation"/>
+        <module name="EmptyLineSeparator">
+            <property name="allowMultipleEmptyLines" value="true"/>
+            <property name="maxEmptyLines" value="1"/>
+        </module>
     </module>
 </module>

@@ -34,12 +34,12 @@ jobs:
 
       - name: Run integration tests
         run: ./gradlew integrationTest
-      
+
       # verifica si el codigo sigue reglas de formateo
       # si no las sigue, genera error
       - name: Check code formatting
         run: ./gradlew spotlessCheck
-      
+
       # aplica el formateo del codigo automaticamente
       - name: Format code
         run: ./gradlew spotlessApply

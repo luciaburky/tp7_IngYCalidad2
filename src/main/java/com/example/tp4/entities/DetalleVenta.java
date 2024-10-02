@@ -1,15 +1,13 @@
 package com.example.tp4.entities;
 
 public class DetalleVenta {
-    private Integer cantidad;
+  private Integer cantidad;
 
+  public DetalleVenta(Integer cantidad) {
+    this.cantidad = cantidad;
+  }
 
-    public DetalleVenta(Integer cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public Integer getCantidad() {
-        return cantidad;
-    }
-
+  public Integer getCantidad() {
+    return cantidad;
+  }
 }
